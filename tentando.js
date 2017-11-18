@@ -2,34 +2,47 @@ var x, y;
 var vida;
 var pontos;
 var tamBloco = 40; 
-var imgParede; 
-//var px;
-//var py;
+var imgParede;
+var indiceDaVez=0; 
+var CodigoX=[];
+var CodigoY=[];
 var cenario;
 var X;
 var Y;
 var posColuna;
 var posLinha;
+var linha = [];
 cenario= [
-['l','l','l','l','l','l','l','l','l','l','l','l','l','l','l','l','l','l','l','l','l','l','l','l','l','l','l'],
-['l','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#'],
-['l','#','l','l','l','l','l','l','l','l','l','l','l','l','#','l','l','l','l','l','l','l','l','l','l','l','#'],
-['l','#','l','l','l','l','l','l','#','l','l','l','l','l','#','l','l','l','l','l','l','l','l','l','l','l','#'],
-['l','#','l','l','#','l','l','l','l','l','l','l','l','l','#','l','l','l','l','l','l','l','l','l','l','l','#'],
-['l','#','l','l','l','l','l','l','l','l','l','l','l','l','#','l','l','l','l','l','l','l','l','l','l','l','#'],
-['l','#','l','l','l','#','l','l','l','l','l','l','l','l','#','l','l','l','l','l','l','l','l','l','l','l','#'],
-['l','#','l','l','l','l','l','l','l','#','l','l','l','l','#','l','l','l','l','l','l','l','l','l','l','l','#'],
-['l','#','#','l','l','l','l','l','l','l','l','l','l','l','#','l','l','l','l','l','l','l','l','l','l','l','#'],
-['l','#','l','l','l','l','l','l','l','l','l','l','l','l','#','l','l','l','l','l','l','l','l','l','l','l','#'],
-['l','#','l','#','l','l','#','l','l','l','l','l','l','l','#','l','l','l','l','l','l','l','l','l','l','l','#'],
-['l','#','l','l','l','l','l','l','l','#','#','l','l','l','#','l','l','l','l','l','l','l','l','l','l','l','#'],
-['l','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#']
+['',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' '],
+['','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#'],
+['','#',' ',' ',' ',' ',' ','','','',' ',' ',' ',' ','#',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','#'],
+['','#','soma;',' ',' ',' ',' ',' ','#',' ',' ',' ',' ',' ','#',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','#'],
+['','#',' ',' ','#',' ',' ',' ',' ',' ',' ',' ',' ',' ','#',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','#'],
+['','#',' ',' ',' ',' ','var','','',' ',' ','n1=',' ',' ','#',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','#'],
+['','#',' ',' ',' ','#',' ',' ',' ',' ',' ',' ',' ',' ','#',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','#'],
+['','#',' ','parseInt(',' ',' ','(prompt("',' ',' ','#',' ',' ',' ',' ','#',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','#'],
+['','#','#',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','#',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','#'],
+['','#','',' ',' ',' ',' ',' ','n1,',' ',' ',' ',' ',' ','#',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','#'],
+[' ','#',' ','#',' ',' ','#',' ',' ',' ',' ',' ','n2,',' ','#',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','#'],
+[' ','#',' ','',' ',' ',' ',' ',' ','#','#',' ',' ',' ','#',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ',' ','#'],
+[' ','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#']
 ];
+
+
+
 
 function setup() {
 createCanvas(1110,540);
 x= 100; 
 y = 100;
+linha[0] = "var";
+linha[1] = "n1,";
+linha[2] = "n2,";
+linha[3] = "soma";
+for(i=0;i<4;i++){//Sorteio do X da linha de código
+CodigoX[i]=Math.random(0,600);
+CodigoY[i]=Math.random(0,600);
+}
 }
 
 function pacMan(x, y) { 
@@ -43,17 +56,16 @@ function FundoTela(){
 textStyle(BOLD);
 vida=0;
 pontos=0;
-fill(150,150,150);
-stroke(130,130,130);
-strokeWeight(1); 
+fill(50,50,50);
+noStroke(); 
 textSize(15);
-text("Java", 100, 60); text("Java", 275, 60); text("Java", 450, 60);
-text("JavaScript", 100, 130);text("JavaScript",275, 120);text("JavaScript", 450, 120);
-text("C++", 100, 175); text("C++",275, 175); text("C++", 450, 175);
-text("Phyton", 100, 230); text("Phyton", 275, 230);text("Phyton", 450, 230);
-text("C#", 100, 300);text("C#", 275, 300);text("C#", 450, 300);
-text("JavaScript", 100, 375);text("JavaScript",275, 375);text("JavaScript", 450, 375);
-text("Java", 100, 450); text("Java", 275, 450); text("Java", 450, 450); 
+//text("Java", 100, 60); text("Java", 275, 60); text("Java", 450, 60);
+//text("JavaScript", 100, 130);text("JavaScript",275, 120);text("JavaScript", 450, 120);
+//text("C++", 100, 175); text("C++",275, 175); text("C++", 450, 175);
+//text("Phyton", 100, 230); text("Phyton", 275, 230);text("Phyton", 450, 230);
+//text("C#", 100, 300);text("C#", 275, 300);text("C#", 450, 300);
+//text("JavaScript", 100, 375);text("JavaScript",275, 375);text("JavaScript", 450, 375);
+//text("Java", 100, 450); text("Java", 275, 450); text("Java", 450, 450); 
 fill(51,51,153); //Retângulo (Vida)
 //rect(480,10,75,17.5); //Retângulo (Vida)
 fill(255,255,255); // (Vida)
@@ -73,6 +85,10 @@ function Niveis(){
     textSize(18);
     text("OBJETIVO:", 610, 110 ); 
     text("Somar dois numeros digitados pelo usuario.", 630,140); 
+
+    //for(i=0;i<4;Math.random(i)){
+
+    //}
 
     //fill(255,255,255); //Texto(Nivel)
     //textSize(17.3);
@@ -160,15 +176,42 @@ function Niveis(){
     }
     
 
-function colisao(px, py) {
-posColuna = Math.floor( px / tamBloco ); 
-posLinha = Math.floor( py / tamBloco );
-if ( cenario[posLinha][posColuna] == '#' ) {
-return true; 
+
+function DesenharCenario()
+{
+    for ( i = 0; i < cenario.length; i++ )
+    { 
+        for ( j = 0; j < cenario[0].length; j++ )
+        {
+            var caractere = cenario[i][j]      
+            if (  caractere == '#' )
+            {
+  
+                fill(51,51,153);
+                stroke(150,150,150);
+                rect(j*tamBloco,i*tamBloco,tamBloco,tamBloco); 
+            }
+            else
+            {
+                fill(255,255,255); //Texto(Nivel)
+                textSize(15);
+                text(caractere, j*tamBloco, i*tamBloco); //Inicialização Nível 1
+            }
+        }
+    }
 }
-else {
-return false; 
-}
+function colisao(px, py) 
+{
+    posColuna = Math.floor( px / tamBloco ); 
+    posLinha = Math.floor( py / tamBloco );
+    if ( cenario[posLinha][posColuna] == '#' )
+    {
+        return true; 
+    }
+    else
+    {
+        return false; 
+    }
 }
 
 function draw() { //funçao de colisao
@@ -177,20 +220,12 @@ background(0,0,0);
 FundoTela(); //Chamar função FundoTela
 Niveis(); //Chamar função Niveis
 Respostas();// Chamar funções Respostas
-for ( i = 0; i < cenario.length; i++ ) { 
-for ( j = 0; j < cenario[0].length; j++ ) { 
-if ( cenario[i][j] == '#' ) {
-//image(imgParede,j*tamBloco,i*tamBloco); 
-fill(51,51,153);
-rect(j*tamBloco,i*tamBloco,tamBloco,tamBloco); 
+DesenharCenario();
+pacMan();
+MoverPacMan();
+
 }
-if ( cenario[4][8] == '#' ) {
-//image(imgParede,j*tamBloco,i*tamBloco); 
-fill(51,51,153);
-rect(j*tamBloco,i*tamBloco,tamBloco,tamBloco); 
-}
-}
-}
+function MoverPacMan(){
 if (keyIsDown(LEFT_ARROW)) {
 if ( ! colisao( x - 4 - tamBloco/2, y ) ) {
 x = x - 4; 
@@ -212,4 +247,18 @@ y = y + 4;
 } 
 }
 pacMan(x,y); 
+//for(i=0;i<4;i++){
+  //  text(linha[i], CodigoX[i], CodigoY[i]); //Pegar código
+//     if(dist(x,y,CodigoX[i], CodigoY[i] < 20)){
+//         if(linha[indiceDaVez]==linha[i])
+//         {
+//             pontos++;
+//         indiceDaVez++;
+//         //if(indiceDaVez==4){
+
+//         //}
+//         }
+//     }
+// }
+//     
 }
