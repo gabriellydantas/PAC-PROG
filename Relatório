@@ -1,0 +1,39 @@
+Escola de Ciências e Tecnologia – UFRN
+Lógica de Programação
+Professor: Orivaldo Santana Jr.
+
+
+Relatório
+
+1. Equipe de desenvolvimento
+	Gabrielly de Sousa Pinto Dantas – Subturma: 1 “A”.
+	Maria Eduarda Gomes França dos Santos – Subturma: 1 “A” (Líder)
+2. Evolução do projeto
+	As etapas foram entregues sempre no prazo, exceto a colisão com um inimigo visto que o objetivo do nosso jogo não conta com essa etapa. O jogo Pac-Prog funciona da seguinte maneira: toda a interface e design parece com o Pac-man original. Há um elemento definido como Pac, ele percorre todo cenário e colide com as barreiras do labirinto. Seu objetivo é colidir e só então fagocitar as letras e comados presentes na tela. Os comados presentes desrespeitam aos códigos de programação, fazendo com que o objetivo maior de todo projeto seja educacional. 
+	Jogo destinado à iniciantes na área de programação, que pretendem treinar, estudar ou adquirir mais conhecimento dentro da linguagem JavaScript. Pac-Prog contém 6 níveis de dificuldade sendo cada um deles voltado aos assuntos específicos trabalhados dentro da disciplina de Lógica de Programação durante o semestre 2017.2, disciplina ministrada pelo professor Orivaldo Santana.
+	O nível 1 tem por objetivo somar dois números digitados pelo usuário, essa etapa trabalha os conhecimentos de declaração de variáveis e o uso de comados como os de entrada e saída de variáveis, assim como apresentar uma mensagem na tela. 
+	O nível 2 por sua vez, tem como objetivo receber dois valores, sendo eles: altura e massa, e calcular o IMC (Índice de Massa Corporal) do usuário. Trabalha e reforça os conhecimentos sobre declaração de variáveis, uso de comandos de entrada e saída, mostrar mensagem na tela e usar comados de potência fornecidos pela linguagem JavaScript como o Math.pow(a,b).
+	O nível 3 a fim de que o jogador pudesse treinar seus conhecimentos a respeito do uso de condicionais como: if e else, a questão a ser resolvida tem por objetivo verificar se um número digitado pelo usuário é divisível por 3, 4 ou 5 e mostrar na tela por qual deles é divisível.
+	O nível 4 reforça os conceitos vistos a respeito de laços de repetição, em específico o uso do comando: while. O programa por sua vez deve mostrar na tela uma contagem até 22, a parti de um valor inicial digitado pelo usuário.
+	O nível 5 exige conhecimentos do jogador a respeito do laço contado, em específico o: for. Onde mostra uma sequência de números de forma decrescente num intervalo de 1 à 10. 
+	O nível 6, último nível do jogo e conhecido também pela questão desafio, exige um conhecimento sobre o último conteúdo ministrado em aula: vetores. A questão trabalha desde a declaração de vetores, a atribuição de valores inseridos pelos usuários, usa de uma condicional para testar se o índice do vetor é par e a partir disso mostra na tela os valores que foram digitados pelo usuário que foram armazenados em índices pares.
+ 
+3. Funcionalidades não-concluídas
+A partir da orientação do professor, devido à dificuldade de implementação do código, foi nos pedido que apenas o nível 1 fosse mostrado e executado conforme o planejamento.
+4. Dificuldades
+Acreditamos que as maiores dificuldades enfrentadas pela dupla foram: inserir imagens e animações na tela como gifs, e colocar dentro da matriz todos os textos que eram necessários para que fossem apresentados para o usuário. Funcionalidades como fazer o Pac “comer” os códigos e somete assim contabilizar e incrementar as variáveis vidas e pontos também foram problemas.
+As superamos através de muito atendimento com o professor durante as aulas de laboratório, auxílio dos monitores também no mesmo horário, pesquisas na internet, vídeos explicativos e ajuda de amigos que não estão matriculados na disciplina.
+5. Papel dos integrantes
+De modo geral, todo o projeto foi desenvolvido por ambos os membros da equipe durante as aulas de auxílio no laboratório. Houve também encontros fora do campus para que se pudesse executar e entregar todo o trabalho dentro do prazo e com todas as etapas e funcionalidades corretas.
+6. Lições aprendidas
+Avaliação do ponto de vista de Maria Eduarda Gomes(Líder) e de Gabrielly Dantas:
+Para a dupla as maiores dificuldades derivaram dos conceitos, estruturas e comandos estudados na sala. Durante as aulas, todo o conteúdo pareceu bastante abstrato e foi muito gratificante perceber e trabalhar em um projeto que pôde nos mostrar um pouco da aplicabilidade da disciplina de Lógica de Programação.
+Não tivemos problemas relacionados a experiência de trabalhar em equipe, visto que ambos colaboraram de forma considerável desde a elaboração, estrutura e  desenvolvimento do projeto.
+
+
+7. Comentários gerais
+
+Professor Orivaldo,
+Sem dúvidas, apesar de demandar bastante tempo e não ser um projeto muito fácil de desenvolver, acreditamos que esta forma de avaliação se torna bem mais válida no âmbito do conhecimento. O intuito buscado pela maioria dos estudantes dentro de uma universidade é de modo geral, o conhecimento acima de tudo. E poder proporcionar através de projetos como esses que possamos ver a aplicabilidade dos conceitos e de toda teoria estudada é uma forma muito eficaz de transmitir o conhecimento. 
+Desde já agradecemos a toda a paciência e a todos ensinamentos passados a nós. 
+Respeitosamente e gratas, Gabrielly Dantas e Maria Eduarda Gomes.
